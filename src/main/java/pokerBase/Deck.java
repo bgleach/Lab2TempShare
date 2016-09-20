@@ -35,6 +35,10 @@ public class Deck  {
 			deck.set(i, temporaryCard);
 			}
 		}
+	
+	public Card Draw(){
+		return deck.remove(0);
+	}
 }
 
 

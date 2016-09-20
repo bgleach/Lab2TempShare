@@ -14,7 +14,24 @@ public class Hand {
 	private ArrayList<Card> getCardsInHand() {
 		return CardsInHand;
 	}
-
+	
+	public void addCard (Deck deck) {
+		CardsInHand.add(deck.Draw());
+	}
+	
+	public void rankSort() {
+		int size = this.CardsInHand.size();
+		boolean swapped;
+		do {
+			swapped = false;
+			for (int index = 0; index < size - 1; index ++) {
+				if (this.CardsInHand.get(index).getRank().ordinal() < this.CardsInHand.get(index + 1).getRank().ordinal()) {
+					Card tempCard = this.CardsInHand.get(index);
+					this.CardsInHand.set(index, this.CardsInHand.get(index + 1));
+				}
+			}
+		}
+	}
 	private static boolean isHandFlush(ArrayList<Card> cards) {
 
 		// TODO Implement this method

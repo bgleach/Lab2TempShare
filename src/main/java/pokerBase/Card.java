@@ -30,8 +30,8 @@ public class Card {
 
 		public int compare(Card c1, Card c2) {
 
-		   int Cno1 = c1.getRank().getiRankNbr();
-		   int Cno2 = c2.getRank().getiRankNbr();
+		   int Cno1 = c1.getRank().getRank_value();
+		   int Cno2 = c2.getRank().getRank_value();
 
 		   /*For descending order*/
 		   return Cno2 - Cno1;
